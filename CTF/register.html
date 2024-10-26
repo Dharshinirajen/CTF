@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Byte Busters CTF - Registration</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap4-neon-glow.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel='stylesheet' href='//cdn.jsdelivr.net/font-hack/2.020/css/hack.min.css'>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body class="imgloaded">
+    <div class="glitch">
+        <div class="glitch__img glitch__img_register"></div>
+        <div class="glitch__img glitch__img_register"></div>
+    </div>
+
+    <div class="navbar-dark text-white">
+        <div class="container">
+            <nav class="navbar px-0 navbar-expand-lg navbar-dark">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a href="index.html" class="pl-md-0 p-3 text-decoration-none text-light">
+                            <h3 class="bold"><span class="color_danger">Byte Busters-</span><span class="color_white">CTF</span></h3>
+                        </a>
+                    </div>
+                    <div class="navbar-nav ml-auto">
+                        <a href="index.html" class="p-3 text-decoration-none text-light bold">Home</a>
+                        <a href="about.html" class="p-3 text-decoration-none text-light bold">About</a>
+                        <a href="hackerboard.html" class="p-3 text-decoration-none text-light bold">Hackerboard</a>
+                        <a href="login.html" class="p-3 text-decoration-none text-light bold">Login</a>
+                        <a href="register.html" class="p-3 text-decoration-none text-white bold">Register</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div class="jumbotron bg-transparent mb-0 pt-3 radius-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-10">
+                    <h1 class="display-1 bold color_white content__title">CTF<span class="vim-caret">&nbsp;</span></h1>
+                    <p class="text-grey text-spacey hackerFont lead mb-5">
+                        Join the community and be part of the future of the information security industry.
+                    </p>
+                    <div class="row hackerFont">
+                        <div class="col-md-8">
+                            <form id="forms" action="register.php" method="post" onsubmit="return validateForm()">
+                                <!-- Team Member Names -->
+                                <div class="form-group">
+                                    <label for="member1">Member-1</label>
+                                    <input type="text" class="form-control" id="member1" placeholder="Enter the name" name="member1" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="member2">Member-2</label>
+                                    <input type="text" class="form-control" id="member2" placeholder="Enter the name" name="member2">
+                                </div>
+                                <div class="form-group">
+                                    <label for="member3">Member-3</label>
+                                    <input type="text" class="form-control" id="member3" placeholder="Enter the name" name="member3">
+                                </div>
+                                <!-- College -->
+                                <div class="form-group">
+                                    <label for="college">College</label>
+                                    <input type="text" class="form-control" id="college" placeholder="Enter College Name" name="college" required>
+                                </div>
+                                <!-- Team Name and ID -->
+                                <div class="form-group">
+                                    <label for="team_name">Team Name</label>
+                                    <input type="text" class="form-control" id="team_name" placeholder="Enter Team Name" name="team_name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="team_id">Team ID</label>
+                                    <input type="text" class="form-control" id="team_id" placeholder="Enter 5-digit Team ID" name="team_id" required>
+                                </div>
+                                <!-- Department and Year -->
+                                <div class="form-group">
+                                    <label for="department">Department</label>
+                                    <select class="custom-select" id="department" name="Department" required>
+                                        <option value="default" disabled selected>Choose...</option>
+                                        <option value="CSE">CSE</option>
+                                        <option value="ADS">ADS</option>
+                                        <option value="AI/M">AI/ML</option>
+                                        <option value="IT">IT</option>
+                                        <option value="MECH">MECH</option>
+                                        <option value="ECE">ECE</option>
+                                        <option value="EEE">EEE</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="year">Year</label>
+                                    <select class="custom-select" id="year" name="Year" required>
+                                        <option value="default" disabled selected>Choose...</option>
+                                        <option value="1">First Year</option>
+                                        <option value="2">Second Year</option>
+                                        <option value="3">Third Year</option>
+                                        <option value="4">Final Year</option>
+                                    </select>
+                                </div>
+                                <!-- Phone Number -->
+                                <div class="form-group">
+                                    <label for="phone">Phone</label>
+                                    <input type="number" class="form-control" id="phone" placeholder="Enter Number" name="phone" required>
+                                </div>
+                                <!-- Checkbox and Submit Button -->
+                                <div class="custom-control custom-checkbox my-4">
+                                    <input type="checkbox" class="custom-control-input" id="solemnly-swear" required>
+                                    <label class="custom-control-label" for="solemnly-swear">I solemnly swear that I am up to no good.</label>
+                                </div>
+                                <button class="btn btn-outline-danger btn-shadow px-3 my-2 ml-0 ml-sm-1 text-left" type="submit">Start Hacking...</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Validation Script -->
+    <script src="js/form-validation.js"></script> <!-- link your validation script here if needed -->
+
+    <!-- Optional JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUqY1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+</html>
